@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Complete the Lockboxes Interview Challenge"""
 
+
 def canUnlockAll(boxes):
     """Method that determines if all boxes can be opened
         boxes: a list of lists
@@ -12,8 +13,8 @@ def canUnlockAll(boxes):
     # List of unlocked boxes
     unlocked = []
     for listt in boxes:
-        for number in listt: # Loop through all the numbers in a list
-            if number in unlocked or number == 0: # Check for either if the number is already in `unlocked` or is 0
+        for number in listt:  # Loop through all the numbers in a list
+            if number in unlocked or number == 0:
                 pass
             else:
                 if i == 1:
@@ -32,4 +33,3 @@ def canUnlockAll(boxes):
             return False
 
     return True
-
