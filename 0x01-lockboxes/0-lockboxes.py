@@ -10,15 +10,16 @@ def canUnlockAll(boxes):
     numBoxes = len(boxes)
     # Variable to track the index of a box
     i = 0
-    # List of unlocked boxes
+    # List that will contain the key of all boxex that can be unlocked
     unlocked = []
+
     for listt in boxes:
         for number in listt:  # Loop through all the numbers in a list
             if number in unlocked or number == 0:
                 pass
             else:
                 if i == 1:
-                    if number in range(i, numBoxes):
+                    if number in range(i+1, numBoxes):
                         unlocked.append(number)
                 else:
                     if number in range(0, i) or number in range(i+1, numBoxes):
