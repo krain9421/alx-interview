@@ -18,7 +18,7 @@ def canUnlockAll(boxes):
             if number in unlocked or number == 0:
                 pass
             else:
-                if i == 1:
+                if i >= 0 and i <= 1:
                     if number in range(i+1, numBoxes):
                         unlocked.append(number)
                 else:
