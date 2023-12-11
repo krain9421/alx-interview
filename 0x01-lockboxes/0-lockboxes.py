@@ -13,18 +13,21 @@ def canUnlockAll(boxes):
     # List that will contain the key of all boxex that can be unlocked
     unlocked = []
 
-    for listt in boxes:
-        for number in listt:  # Loop through all the numbers in a list
-            if number in unlocked or number == 0:
-                pass
-            else:
-                if i >= 0 and i <= 1:
-                    if number in range(i+1, numBoxes):
-                        unlocked.append(number)
+    for obj in boxes:
+        if type(obj) != list:  # Check if object is a list
+            pass
+        else:
+            for num in obj:  # Loop through all the numbers in a list
+                if num in unlocked or num == 0:
+                    pass
                 else:
-                    if number in range(0, i) or number in range(i+1, numBoxes):
-                        unlocked.append(number)
-            i = i + 1
+                    if i >= 0 and i <= 1:
+                        if num in range(i+1, numBoxes):
+                            unlocked.append(num)
+                    else:
+                        if num in range(0, i) or num in range(i+1, numBoxes):
+                            unlocked.append(num)
+                i = i + 1
 
     # Check the list of unlocked boxes
     for number in range(1, numBoxes):
