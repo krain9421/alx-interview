@@ -2,8 +2,8 @@
 """Module containing a script that reads stdin and computes metrics"""
 import random
 import sys
-from time import sleep
-import datetime
+# from time import sleep
+# import datetime
 
 
 line = []
