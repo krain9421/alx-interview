@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""This module contains a script that reads stdin and computes metrics"""
-
-
 import random
 import sys
 from time import sleep
 import datetime
+"""This module contains a script that reads stdin and computes metrics"""
 
 
 def checker(line):
