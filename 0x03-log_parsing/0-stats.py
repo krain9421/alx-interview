@@ -61,3 +61,4 @@ while (True):
     print("File size: {}".format(file_size))
     for k in st_dict:
         print("{}: {}".format(k, st_dict[k]))
+
