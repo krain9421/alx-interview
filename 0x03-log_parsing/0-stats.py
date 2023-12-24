@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module containing a script that reads stdin and computes metrics"""
 import random
 import sys
 from time import sleep
@@ -62,3 +63,6 @@ while (True):
     for k in st_dict:
         print("{}: {}".format(k, st_dict[k]))
 
+    file_size = 0  # Resetting file_size to 0
+    for k in st_dict:  # Resetting the values in st_dict to 0
+        st_dict[k] = 0
