@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-"""
-This module contains a script that reads stdin and computes metrics
+"""This module contains a script that reads stdin and computes metrics"""
 
-Input format:
-`<IP Address> -
-[<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`
-(if the format is not this one, the line must be skipped)
-"""
 
 import random
 import sys
