@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains a script that reads stdin and computes metrics
+"""This module reads stdin and computes metrics
 """
 
 
