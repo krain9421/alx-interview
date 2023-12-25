@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 This module contains a script that reads stdin and computes metrics
 After every 10 lines ,print these statistics:
