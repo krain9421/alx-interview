@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
+"""This module contains a script that reads stdin and computes metrics
+    After every 10 lines ,print these statistics:
+        Total file size: File size: <total size>
+        <total size> is the sum of all previous <file size>
+        Number of lines by status code:
+        possible status code: 200, 301, 400, 401, 403, 404, 405 and 500
+        if a status code doesn’t appear or is not an integer,
+            don’t print anything for this status code
+        format: <status code>: <number>
+        status codes should be printed in ascending order
 """
-This module contains a script that reads stdin and computes metrics
-After every 10 lines ,print these statistics:
-    Total file size: File size: <total size>
-    <total size> is the sum of all previous <file size>
-    Number of lines by status code:
-    possible status code: 200, 301, 400, 401, 403, 404, 405 and 500
-    if a status code doesn’t appear or is not an integer, 
-        don’t print anything for this status code
-    format: <status code>: <number>
-    status codes should be printed in ascending order
-"""
+
 import random
 import sys
 from time import sleep
