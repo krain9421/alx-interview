@@ -2,11 +2,13 @@
 """This module reads stdin and computes metrics
 """
 
+import sys
+
 
 def checker(line):
+    """Function that checks if a line is of a specific format
     """
-        Function that checks if a line is of a specific format
-    """
+
     st_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
     checknum = 0
     if (len(line[0].split(".")) == 4):
@@ -49,7 +51,7 @@ st_dict = {"200": 0, "301": 0, "400": 0, "401": 0,
 file_size = 0
 while (True):
     for i in range(10):
-        # line = sys.stdin.readline().split()
+        line = sys.stdin.readline().split()  # Get a line from stdin
         if (checker(line)):
             file_size = file_size + int(line[8])
             st_dict[line[7]] = st_dict[line[7]] + 1
