@@ -1,0 +1,57 @@
+#!/usr/bin/python3
+"""Module for performing minimum operations"""
+
+
+def isPrime(n):
+    """
+    function that checks if a number is prime
+    function will not check for number 1
+      since the calling function will never
+      use 1 as an argument
+    """
+    flag = False
+
+    for i in range(2, 10):
+        if (i != n):
+            if (n % i) == 0:
+                flag = True
+                break
+
+    return not flag
+
+
+def highest_prime_factor(n):
+    """
+    function that calculates the highest
+    prime factor of a number
+    """
+    highest_prime = -1
+    i = 2
+    while i * i <= n:
+        while n % i == 0:
+            highest_prime = i
+            n //= i
+        i += 1
+
+    if n > 1:
+        highest_prime = n
+    return highest_prime
+
+
+def minOperations(n):
+    """
+    function that calculates the fewest operations
+    needed to result in exactly `n` characters
+
+    returns an integer
+    If n is impossible to achieve, return 0
+    """
+
+    if n <= 1:
+        return 0
+
+    if (isPrime(n)):
+        return n
+    else:
+        p = highest_prime_factor(n)
+        return (int(n/p) + p)
