@@ -18,7 +18,7 @@ def validUTF8(data):
     """
     i = 0  # Index of the list
     over_bytes = 0  # Stores number of extra bytes
-    pass_byte = 0
+    pass_byte = 0  # Stores number of bytes to skip
     for byte in data:
         if pass_byte > 0:
             pass_byte -= 1
@@ -43,4 +43,5 @@ def validUTF8(data):
                     return False
             pass_byte = over_bytes
             over_bytes = 0
+            i = i + 1  # Increment the index after every iteration
     return True
