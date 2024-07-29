@@ -12,12 +12,12 @@ def validUTF8(data):
     A character in UTF-8 can be 1 to 4 bytes long
     The data set can contain multiple characters
     The data will be represented by a list of integers
-    Each integer represents 1 byte of data, 
-        therefore you only need to handle the 
+    Each integer represents 1 byte of data,
+        therefore you only need to handle the
         8 least significant bits of each integer
     """
-    i = 0 # Index of the list
-    over_bytes = 0 # Stores number of extra bytes
+    i = 0  # Index of the list
+    over_bytes = 0  # Stores number of extra bytes
     pass_byte = 0
     for byte in data:
         if pass_byte > 0:
