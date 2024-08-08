@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-function fetchCharacters(movieId) {
+function fetchCharacters (movieId) {
   request.get(`https://swapi-api.alx-tools.com/api/films/${movieId}/`, { json: true }, async (err, res, body) => {
     if (err) console.log(err);
     for (const character of body.characters) {
@@ -16,7 +16,7 @@ function fetchCharacters(movieId) {
 
 const movieId = process.argv[2];
 if (!movieId) {
-    console.error('Please provide a movie ID (e.g., 3 for "Return of the Jedi").');
+  console.error('Please provide a movie ID (e.g., 3 for "Return of the Jedi").');
 } else {
-    fetchCharacters(movieId);
+  fetchCharacters(movieId);
 }
