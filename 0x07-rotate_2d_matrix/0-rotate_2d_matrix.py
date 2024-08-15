@@ -2,7 +2,6 @@
 """
 Module for implementing rotation of a 2D Matrix
 """
-import copy
 
 
 def rotate_2d_matrix(matrix):
@@ -12,8 +11,8 @@ def rotate_2d_matrix(matrix):
     Matrix must be edited in-place.
     Matrix will have 2 dimensions and will not be empty.
     """
-    # Create a deep copy of the matrix to be used in the loop
-    matrix_tmp = copy.deepcopy(matrix)
+    # Create a copy of the matrix to be used in the loop
+    matrix_tmp = matrix.copy()
 
     for i in range(len(matrix_tmp)):
         transposed_row = []
