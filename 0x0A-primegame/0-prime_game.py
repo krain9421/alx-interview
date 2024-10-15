@@ -52,7 +52,7 @@ def isWinner(x, nums):
     mariaWins = 0
     benWins = 0
 
-    for num in nums:
+    for num in nums[:x]:
         numPrime = SieveOfEratosthenes(num)
         if (numPrime % 2 == 0):
             benWins += 1
